@@ -1,27 +1,8 @@
-# TestProject
+This is a project made using MEAN stack. This project includes authentication and authorization. Once the user is able to login after signing up they will be able to "Add a Post". Since the authorization is there no user other than the original user who has created the post will be able to perform any operation on the existing data. This app contains basic CRUD operations except the eedit functionality which will be added later on. In further updated image upload and download functionality will also be added and the design of the app will be changed a bit which will make it look more like a drive/file explorer.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+Command for backend: npm run start:server
+Command for frontend: ng serve
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In this app, once the user is done with signing up and login, the user will be able to add a post with some title and content. Once the post is added an entry will be created in the db(mondodb cluster) with title and content and self incrementing id. For authentication and authorization a seperate entry will be created in a seperate schema. Only the user with correct login id and password will be able to see the existing posts/messages. If the user idd and password does not exist in the db, the user will not be able to login and he needs to sign up first. Once the user is done signing up, he will be redirected to login page where he needs to login through same username and password.
